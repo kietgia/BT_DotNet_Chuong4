@@ -18,6 +18,8 @@
                Gọi View Component "ProductList" đã tạo trong Shared/Components
             *@
             @await Component.InvokeAsync("ProductList")
+            @* Gọi BestSellers và truyền count = 3 *@
+@await Component.InvokeAsync("BestSellers", new { count = 3 })
         </div>
     </div>
 </div>

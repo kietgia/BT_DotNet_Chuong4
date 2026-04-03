@@ -386,3 +386,4 @@ C:\Users\ASUS\btdotnet-chuong4\obj\Debug\net10.0\staticwebassets.build.endpoints
 C:\Users\ASUS\btdotnet-chuong4\obj\Debug\net10.0\swae.build.ex.cache
 C:\Users\ASUS\btdotnet-chuong4\obj\Debug\net10.0\DemoLayouts.genruntimeconfig.cache
 C:\Users\ASUS\btdotnet-chuong4\obj\Debug\net10.0\ref\DemoLayouts.dll
+C:\Users\ASUS\btdotnet-chuong4\obj\Debug\net10.0\DemoLayouts.sourcelink.json
