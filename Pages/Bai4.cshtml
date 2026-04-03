@@ -1,0 +1,32 @@
+@page
+@model DemoLayouts.Pages.Bai4Model
+
+<h2>Bài tập 4</h2>
+
+<form method="post">
+    <label>Tên:</label>
+    <input type="text" asp-for="Ten" />
+    <br />
+
+    <label>Điểm:</label>
+    <input type="number" asp-for="Diem" step="0.1" />
+    <br />
+
+    <button type="submit">Thêm</button>
+</form>
+
+<h3>Danh sách sinh viên</h3>
+
+<table border="1">
+    <tr>
+        <th>Tên</th>
+        <th>Điểm</th>
+    </tr>
+
+@foreach (var sv in DemoLayouts.Pages.Bai4Model.DanhSach)    {
+        <tr>
+            <td>@sv.Ten</td>
+            <td>@sv.Diem</td>
+        </tr>
+    }
+</table>

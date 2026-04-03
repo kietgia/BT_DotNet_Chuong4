@@ -1,0 +1,22 @@
+@page
+@model DemoLayouts.Pages.Bai3Model
+
+<h2>Bài tập 3</h2>
+
+<form method="post">
+    <label>Họ tên:</label>
+    <input type="text" asp-for="Ten" />
+    <br />
+
+    <label>Năm sinh:</label>
+    <input type="number" asp-for="NamSinh" />
+    <br />
+
+    <button type="submit">Tính tuổi</button>
+</form>
+
+@if (Model.Tuoi != 0)
+{
+    <p>Xin chào @Model.Ten</p>
+    <p>Tuổi: @Model.Tuoi</p>
+}

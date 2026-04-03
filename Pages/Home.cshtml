@@ -1,0 +1,23 @@
+﻿@page
+@model DemoLayouts.Pages.HomeModel
+@{
+    ViewData["Title"] = "Trang chủ - View Component";
+}
+
+<div class="container mt-4">
+    <div class="text-center">
+        <h1 class="display-4 text-primary">Chào mừng Kiệt đến với Cửa hàng</h1>
+        <p class="lead">Đây là bài tập thực hành về View Component trong ASP.NET Core.</p>
+    </div>
+
+    <hr />
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            @* ĐÂY LÀ DÒNG QUAN TRỌNG NHẤT:
+               Gọi View Component "ProductList" đã tạo trong Shared/Components
+            *@
+            @await Component.InvokeAsync("ProductList")
+        </div>
+    </div>
+</div>

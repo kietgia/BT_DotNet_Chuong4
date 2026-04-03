@@ -1,0 +1,15 @@
+@using btdotnet_chuong4.Models
+@model List<Product>
+
+<div class="alert alert-primary mt-3">
+    <h5>Danh sách sản phẩm từ View Component</h5>
+    <ul class="list-group">
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item d-flex justify-content-between">
+                <span>@item.Name</span>
+                <span class="text-success fw-bold">@item.Price.ToString("C")</span>
+            </li>
+        }
+    </ul>
+</div>
