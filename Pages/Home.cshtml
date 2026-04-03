@@ -1,25 +1,33 @@
 ﻿@page
 @model DemoLayouts.Pages.HomeModel
 @{
-    ViewData["Title"] = "Trang chủ - View Component";
+    ViewData["Title"] = "Tổng hợp Bài tập Chương 4";
 }
 
 <div class="container mt-4">
-    <div class="text-center">
-        <h1 class="display-4 text-primary">Chào mừng Kiệt đến với Cửa hàng</h1>
-        <p class="lead">Đây là bài tập thực hành về View Component trong ASP.NET Core.</p>
+    <div class="text-center mb-5">
+        <h1 class="display-4 text-primary">Welcome</h1>
+        <p class="lead">Hệ thống quản lý sản phẩm - Kiệt Đẹp Trai</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4 class="text-info">Bài 3: Sắp xếp Tăng dần</h4>
+            @await Component.InvokeAsync("ProductList", new { sapXepTang = true })
+        </div>
+
+        <div class="col-md-6">
+            <h4 class="text-danger">Bài 3: Sắp xếp Giảm dần</h4>
+            @await Component.InvokeAsync("ProductList", new { sapXepTang = false })
+        </div>
     </div>
 
     <hr />
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-4">
         <div class="col-md-8">
-            @* ĐÂY LÀ DÒNG QUAN TRỌNG NHẤT:
-               Gọi View Component "ProductList" đã tạo trong Shared/Components
-            *@
-            @await Component.InvokeAsync("ProductList")
-            @* Gọi BestSellers và truyền count = 3 *@
-@await Component.InvokeAsync("BestSellers", new { count = 3 })
+            <h4 class="text-warning">Bài 2: Sản phẩm bán chạy (Top 3)</h4>
+            @await Component.InvokeAsync("BestSellers", new { count = 3 })
         </div>
     </div>
 </div>

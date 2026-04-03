@@ -1,15 +1,27 @@
-@using btdotnet_chuong4.Models
+@using DemoLayouts.Models
 @model List<Product>
 
-<div class="alert alert-primary mt-3">
-    <h5>Danh sách sản phẩm từ View Component</h5>
-    <ul class="list-group">
-        @foreach (var item in Model)
-        {
-            <li class="list-group-item d-flex justify-content-between">
-                <span>@item.Name</span>
-                <span class="text-success fw-bold">@item.Price.ToString("C")</span>
-            </li>
-        }
-    </ul>
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Danh sách sản phẩm</h5>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th class="text-end">Giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.Name</td>
+                        <td class="text-end text-success fw-bold">$@p.Price</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
